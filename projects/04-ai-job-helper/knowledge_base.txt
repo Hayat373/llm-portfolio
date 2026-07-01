@@ -1,0 +1,9 @@
+In Ethiopia, AI and software engineering jobs are growing fast in Addis Ababa, especially in companies like Ethio Telecom, banks, and startups.
+
+Key skills in demand: Python, Machine Learning, Data Science, Cloud Computing, SQL.
+
+For entry-level roles, having a strong GitHub portfolio is very important.
+
+Cover letters should highlight relevant projects and enthusiasm for the company.
+
+Interview tips: Prepare for technical questions on algorithms, Python, and problem-solving.
