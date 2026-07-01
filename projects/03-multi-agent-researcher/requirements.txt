@@ -1,0 +1,7 @@
+gradio
+sentence-transformers
+faiss-cpu
+transformers
+torch
+accelerate
+bitsandbytes
