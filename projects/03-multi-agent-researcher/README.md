@@ -15,6 +15,8 @@ A system where multiple specialized agents work together to research and generat
 - Multi-Agent Architecture (custom implementation)
 - RAG for knowledge retrieval
 
+![Demo Screenshot](../../assets/)  
+
 ### How It Works
 1. User asks a question
 2. Researcher Agent gathers information
