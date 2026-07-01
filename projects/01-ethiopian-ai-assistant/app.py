@@ -5,24 +5,33 @@ import numpy as np
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import torch
 
-# ====================== KNOWLEDGE BASE ======================
-knowledge_base = [
-    "Addis Ababa is the capital and largest city of Ethiopia, known as the diplomatic capital of Africa.",
-    "Ethiopia is one of the oldest countries in the world and the only African nation never colonized.",
-    "Injera is the national dish, a spongy flatbread made from teff flour, served with various stews.",
-    "Lalibela is famous for its 11 medieval rock-hewn churches, a UNESCO World Heritage Site.",
-    "Coffee was discovered in Ethiopia. The country has a rich coffee culture.",
-    "AI and tech startups are rapidly growing in Addis Ababa, especially in the Bole area.",
-    "Ethiopia follows its own calendar, which is 7-8 years behind the Gregorian calendar.",
-]
+# ====================== LOAD KNOWLEDGE FROM FILE ======================
+def load_knowledge_base(file_path="knowledge_base.txt"):
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            text = f.read()
+        knowledge_base = [line.strip() for line in text.strip().split("\n\n") if line.strip()]
+        print(f"✅ Loaded {len(knowledge_base)} knowledge entries from {file_path}")
+        return knowledge_base
+    except FileNotFoundError:
+        print(f"⚠️ {file_path} not found. Using default knowledge.")
+        return [
+            "Addis Ababa is the capital and largest city of Ethiopia.",
+            "Ethiopia is known as the cradle of humanity.",
+            "Injera is the national dish of Ethiopia.",
+            "Lalibela is famous for its rock-hewn churches.",
+            "Coffee was discovered in Ethiopia.",
+        ]
 
-# Embeddings + Vector DB
+knowledge_base = load_knowledge_base()
+
+# ====================== EMBEDDINGS + VECTOR DB ======================
 embedder = SentenceTransformer('all-MiniLM-L6-v2')
 embeddings = embedder.encode(knowledge_base)
 index = faiss.IndexFlatL2(embeddings.shape[1])
 index.add(embeddings)
 
-# Load Model with Quantization
+# ====================== LOAD MODEL ======================
 model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
@@ -41,14 +50,16 @@ def chatbot(message, history):
     _, indices = index.search(query_emb, 3)
     context = "\n".join([knowledge_base[i] for i in indices[0]])
     
-    # Build prompt
+    # Build prompt with history
+    history_text = "\n".join([f"User: {h[0]}\nAI: {h[1]}" for h in history[-4:]] if history else [])
+    
     prompt = f"""You are a helpful, knowledgeable, and friendly Ethiopian AI assistant.
 
 Context from knowledge base:
 {context}
 
-Previous conversation:
-{chr(10).join([f"User: {h[0]}\nAI: {h[1]}" for h in history[-3:]] if history else [])}
+Recent conversation:
+{history_text}
 
 User: {message}
 Assistant:"""
@@ -56,7 +67,7 @@ Assistant:"""
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     outputs = model.generate(
         inputs.input_ids,
-        max_new_tokens=300,
+        max_new_tokens=350,
         temperature=0.7,
         top_p=0.9,
         do_sample=True,
@@ -68,18 +79,17 @@ Assistant:"""
         response = response.split("Assistant:")[-1].strip()
     return response
 
-# Gradio App
+# ====================== GRADIO APP ======================
 demo = gr.ChatInterface(
     fn=chatbot,
     title="🇪🇹 Ethiopian AI Assistant",
     description="RAG + Memory Powered • Ask anything about Ethiopia, culture, history, food, or technology!",
-    theme=gr.themes.Soft(),
     examples=[
         "What is special about Ethiopia?",
-        "Tell me about Ethiopian food",
+        "Tell me about Ethiopian food and culture.",
         "What should a tourist know before visiting Addis Ababa?",
         "Explain the history of coffee in Ethiopia."
     ]
 )
 
-demo.launch()
+demo.launch(share=True)
