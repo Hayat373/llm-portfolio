@@ -15,6 +15,8 @@ An AI tool to help with job applications, especially in AI/ML/Software Engineeri
 - Prompt Engineering
 - RAG for job-related knowledge
 
+![Demo Screenshot](../../assets/project04.png)  
+
 ### How to Use
 1. Upload your resume
 2. Paste job description
