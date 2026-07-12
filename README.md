@@ -1,47 +1,61 @@
-# LLM & AI Portfolio
+# Hayat Ahmedjara — AI & Machine Learning Engineer
 
-**Hi, I'm Hayat** — Passionate about building practical and impactful AI applications.
+**Addis Ababa, Ethiopia**  
+Passionate about building practical AI systems that solve real problems.
 
-This repository showcases my best LLM projects focusing on **RAG, Fine-tuning, Agents, and real-world applications**.
+[LinkedIn](https://linkedin.com/in/hayat-ahmedjara) | [Email](mailto:hayahmam3@gmail.com) | [CV](link-to-cv.pdf)
+
+---
 
 ### Featured Projects
 
-### 01. Ethiopian AI Assistant
+#### 🇪🇹 Ethiopian AI Assistant
 **RAG + Memory + Gradio UI**  
-A smart assistant that retrieves accurate Ethiopian knowledge and maintains conversation history.  
-[View Project](./projects/01-ethiopian-ai-assistant) | [Live Demo](#) | [Blog Post](#)
+Intelligent assistant specialized in Ethiopian knowledge, culture, and history.  
+**Tech**: RAG, FAISS, Gradio, TinyLlama  
+[View Project](./projects/01-ethiopian-ai-assistant) | [Live Demo](#)
 
-### 02. Fine-tuned Ethiopian Domain Model
+#### Fine-tuned Ethiopian Domain Model
 **LoRA Fine-tuning on TinyLlama**  
-Customized model for Ethiopian culture, history, and local knowledge.  
-[View Project](./projects/02-fine-tuned-ethiopian-model)
+Customized LLM for Ethiopian context, history, and local knowledge.  
+**Tech**: PEFT/LoRA, 4-bit Quantization  
+[View Project](./projects/02-fine-tuned-domain-model)
 
-### 03. Multi-Agent Research Assistant
-**Researcher + Writer + Critic Agents**  
-Collaborative agents that research and write reports together.  
+#### Multi-Agent Research Assistant
+**Researcher + Writer + Coordinator Agents**  
+Collaborative AI system for research and report generation.  
+**Tech**: Multi-Agent Architecture, Gradio  
 [View Project](./projects/03-multi-agent-researcher)
 
-### 04. AI Job Application Helper
+#### AI Job Application Helper
 **Resume Analyzer + Cover Letter Generator**  
 Practical tool to help with job applications and interview preparation.  
+**Tech**: Prompt Engineering, RAG  
 [View Project](./projects/04-ai-job-helper)
 
 ---
 
-### Skills
-- **LLM Techniques**: RAG, LoRA Fine-tuning, Prompt Engineering, Agents, Quantization
-- **Tools**: Hugging Face, LangChain, Gradio, FAISS, PEFT
-- **Deployment**: Hugging Face Spaces, Gradio
+### Technical Skills
 
-### Learning Journey
-Detailed daily learning logs and experiments: [LLM from Scratch Journey](https://github.com/Hayat373/llm-from-scratch-journey)
+**Computer Vision**  
+YOLO11 (Detection, Pose, Tracking), Depth-Anything V2, OpenCV, Multi-Camera Tracking
+
+**LLMs & Generative AI**  
+RAG Systems, LoRA Fine-tuning, Multi-Agent Systems, Prompt Engineering, Quantization
+
+**Frameworks & Tools**  
+PyTorch, Hugging Face, LangChain, Gradio, FAISS, Git
 
 ---
 
-**Connect with me:**
-- LinkedIn: https://www.linkedin.com/in/hayat-ahmedjara
-- Email:  hayahmam3@gmail.com 
+### Education
+**BSc Software Engineering (AI Stream)**  
+Addis Ababa University, Ethiopia (Expected June 2027)
 
 ---
 
 **Last Updated:** July 2026
+
+---
+
+**Connect with me** for collaboration or opportunities!
