@@ -10,13 +10,13 @@ A smart, domain-specific AI assistant focused on Ethiopian knowledge, culture, h
 - **Retrieval Augmented Generation (RAG)**: Retrieves accurate Ethiopian knowledge before answering
 - **Conversation Memory**: Remembers previous messages in the chat
 - **Domain Knowledge**: Specialized on Ethiopian topics
-- **Clean UI**: Professional Gradio interface with examples
+- **Clean UI**: Professional streamlit UI
 
 ### Tech Stack
 - **LLM**: TinyLlama-1.1B (4-bit quantized)
 - **Embeddings**: all-MiniLM-L6-v2
 - **Vector DB**: FAISS
-- **UI**: Gradio
+- **UI**: streamlit
 - **Framework**: Hugging Face Transformers
 
 ### How It Works
