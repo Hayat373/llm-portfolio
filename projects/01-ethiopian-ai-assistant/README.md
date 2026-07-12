@@ -3,7 +3,7 @@
 **RAG + Memory + Gradio UI**  
 A smart, domain-specific AI assistant focused on Ethiopian knowledge, culture, history, and current affairs.
 
-![Demo Screenshot](Ethiopian.png)  
+![Demo Screenshot](result.png)  
 
 
 ### Features
