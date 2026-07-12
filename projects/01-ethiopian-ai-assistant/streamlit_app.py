@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(page_title="Ethiopian AI Assistant", page_icon="🇪🇹")
 
 st.title("🇪🇹 Ethiopian AI Assistant")
-st.markdown("**Simple RAG Assistant**")
+st.markdown("**RAG Powered Assistant** • Ask anything about Ethiopia!")
 
 # Load knowledge
 @st.cache_resource
@@ -32,10 +32,19 @@ def load_db():
 embedder, index = load_db()
 
 def chatbot(message):
+    # Retrieve relevant knowledge
     query_emb = embedder.encode([message])
-    _, indices = index.search(query_emb, 2)
+    _, indices = index.search(query_emb, 3)
     context = "\n".join([knowledge_base[i] for i in indices[0]])
-    return f"Based on knowledge: {context}\n\nThis is a simplified response for testing."
+    
+    # Natural RAG response
+    response = f"""Based on reliable Ethiopian knowledge:
+
+{context}
+
+This reflects Ethiopia's rich history, culture, and unique traditions."""
+    
+    return response
 
 # UI
 if "messages" not in st.session_state:

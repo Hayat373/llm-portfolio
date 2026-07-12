@@ -1,8 +1,21 @@
-Addis Ababa is the capital and largest city of Ethiopia, known as the diplomatic capital of Africa.
-Ethiopia is one of the oldest countries in the world and the only African nation never colonized.
-Injera is the national dish, a spongy flatbread made from teff flour, served with various stews.
-Lalibela is famous for its 11 medieval rock-hewn churches, a UNESCO World Heritage Site.
-Coffee was discovered in Ethiopia. The country has a rich coffee culture and ceremony.
-AI and tech startups are rapidly growing in Addis Ababa, especially in the Bole area.
-The Ethiopian calendar is 7-8 years behind the Gregorian calendar.
-Ethiopia has incredible diversity with over 80 ethnic groups and languages.
+Addis Ababa is the capital and largest city of Ethiopia. It is known as the diplomatic capital of Africa because it hosts the African Union headquarters and many international organizations.
+
+Ethiopia is one of the oldest countries in the world and the only African nation that was never colonized. It has a rich history dating back thousands of years.
+
+Injera is the national dish of Ethiopia. It is a spongy flatbread made from teff flour, traditionally served with various stews and vegetables.
+
+Lalibela is famous for its 11 medieval rock-hewn churches, carved entirely from solid rock. It is a UNESCO World Heritage Site and a major tourist attraction.
+
+Coffee was discovered in Ethiopia. The country has a deep coffee culture, and the traditional coffee ceremony is an important social ritual.
+
+Ethiopia follows its own calendar, which is 7-8 years behind the Gregorian calendar. It also has its own time system.
+
+The Ethiopian Highlands are one of the most biodiverse regions in Africa, home to unique wildlife like the Ethiopian wolf and gelada baboons.
+
+AI and tech startups are rapidly growing in Addis Ababa, making it a rising tech hub in East Africa.
+
+Ethiopia has over 80 ethnic groups, each with its own language, culture, and traditions, making it one of the most diverse countries in Africa.
+
+Hayat Ahmedjara is a 5th-year Software Engineering (AI Stream) student at Addis Ababa University. He is passionate about Machine Learning, Computer Vision, and Large Language Models. He has built several AI projects including RAG systems, fine-tuned models, and multi-agent assistants.
+
+Hayat Ahmedjara is an aspiring AI and Machine Learning Engineer based in Addis Ababa. He has experience with YOLO11, RAG systems, LoRA fine-tuning, and multi-agent architectures.
